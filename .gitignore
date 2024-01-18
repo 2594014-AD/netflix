@@ -1,0 +1,4 @@
+*.ts
+hls/*
+NginxVideo/www/html/hls/*
+
