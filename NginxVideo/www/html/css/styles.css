@@ -1,0 +1,30 @@
+    /* Add your styles here */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 250px; /* Set the fixed width */
+      height: 150px; /* Set the fixed height */
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-control {
+      cursor: pointer;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }

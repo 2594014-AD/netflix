@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 4) % document.querySelectorAll('.carousel-item').length;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 4 + document.querySelectorAll('.carousel-item').length) % document.querySelectorAll('.carousel-item').length;
+    updateCarousel();
+  }
+
+  function updateCarousel() {
+    const carouselInner = document.getElementById('carousel-inner');
+    const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+    carouselInner.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+  }
+
+  document.querySelector('.carousel-control-next').addEventListener('click', nextSlide);
+  document.querySelector('.carousel-control-prev').addEventListener('click', prevSlide);
+});
